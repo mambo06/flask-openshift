@@ -1,6 +1,14 @@
 from flask import request, redirect, render_template
 from werkzeug.utils import secure_filename
-from app import application
+
+#from flask import Flask
+from flask import request, redirect, render_template, Flask
+
+#app = Flask(__name__)
+
+# from app import upload
+
+application=Flask(__name__,template_folder='template')
 
 import os
 

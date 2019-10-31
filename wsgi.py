@@ -1,5 +1,5 @@
-from app import application
+from app.upload import application
 
 
 if __name__ == "__main__":
-    application.run()
+    application.run(debug=True)
