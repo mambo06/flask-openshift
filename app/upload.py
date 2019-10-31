@@ -12,7 +12,7 @@ application=Flask(__name__,template_folder='template')
 
 import os
 
-application.config["IMAGE_UPLOADS"] = application.instance_path +  "/uploaded"
+application.config["IMAGE_UPLOADS"] = "/opt/app-root/src" +  "/uploaded"
 #app.config["IMAGE_UPLOADS"] = "/opt/app-root/src"
 application.config["ALLOWED_IMAGE_EXTENSIONS"] = ["JPG"]
 application.config["MAX_IMAGE_FILESIZE"] = 30 *  1024 *  1024 #20Kb
