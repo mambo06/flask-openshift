@@ -2,7 +2,7 @@ from flask import request, redirect, render_template
 from werkzeug.utils import secure_filename
 
 #from flask import Flask
-from flask import request, redirect, render_template, Flask
+from flask import request, redirect, render_template, Flask, jsonify
 
 #app = Flask(__name__)
 
@@ -49,6 +49,7 @@ def upload_image():
        filename = secure_filename(image.filename)
        image.save(os.path.join(application.config["IMAGE_UPLOADS"], filename))
        print("Image saved")
+       return jsonify(results = {"name":"flask Jr","accuration":"0.75"}
                 
 
     return render_template("upload_image.html")
