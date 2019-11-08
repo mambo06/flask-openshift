@@ -49,7 +49,7 @@ def upload_image():
        filename = secure_filename(image.filename)
        image.save(os.path.join(application.config["IMAGE_UPLOADS"], filename))
        print("Image saved")
-       return jsonify(results = {"name":"flask Jr","accuration":"0.75"}
+       return jsonify(results = {"name":"flask Jr","accuration":"0.75"})
                 
 
     return render_template("upload_image.html")
